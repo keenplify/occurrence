@@ -1,17 +1,12 @@
 const read = require("./read-data");
 
 const commonWord = async (text) => {
-  const data = await read("/../genesis.txt");
+  const data = await read("/genesis.txt");
+  let output = 0;
 
-  const splitted = data.replace(/(\r\n|\n|\r)/gm, " ").split(" ");
+  //    find common word here
 
-  let counter = 0;
-
-  splitted.forEach((_text) => {
-    if (_text.toLowerCase().includes(text.toLowerCase())) counter++;
-  });
-
-  return counter;
+  return output;
 };
 
 module.exports = commonWord;
